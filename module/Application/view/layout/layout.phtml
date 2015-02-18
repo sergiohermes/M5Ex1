@@ -45,7 +45,23 @@
         </nav>
         <div class="container">
         <div class="col-lg-2">
-            <?php echo $this->categories; ?>            
+        
+            <?php 
+            /**
+             *  #Usando a view helper htmllist 
+             */
+            ?>
+            
+            <?php echo $this->htmllist($this->categories); ?>
+        
+            <!-- 
+            <ul>
+            <?php //foreach ($this->categories as $category) :?>
+                <li><?php //echo $category?></li>
+            <?php //endforeach;?>
+            </ul>
+             -->
+            <?php // echo $this->categories; ?>            
         </div>
         <div class="col-lg-8">
             <?php echo $this->content; ?>
